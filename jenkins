@@ -6,7 +6,7 @@ pipeline {
 	sh '''
 	#!/bin/bash
 	git clone https://github.com/abhiaggowda/cbuild.git
-	cd /var/lib/jenkins/workspace/cpipe
+	cd /var/lib/jenkins/workspace/cpipe/cbuild
 	make '''
 	}
 	}
