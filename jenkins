@@ -1,4 +1,14 @@
-#!/bin/bash
-git clone https://github.com/abhiaggowda/cbuild.git
-cd /var/lib/jenkins/workspace/cpipe
-make
+pipeline{
+	agent any
+	stages{
+	stage("Build"){
+	step{ 
+	sh '''
+	#!/bin/bash
+	git clone https://github.com/abhiaggowda/cbuild.git
+	cd /var/lib/jenkins/workspace/cpipe
+	make'''
+	}
+	}
+}	
+}
