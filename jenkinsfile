@@ -5,6 +5,7 @@ pipeline {
 	steps { 
 	sh '''
 	#!/bin/bash
+	git pull --ff-only
 	git pull https://github.com/abhiaggowda/cbuild.git
 	if ( $? -ne 0 );then
 	
