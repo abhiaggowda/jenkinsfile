@@ -8,8 +8,9 @@ pipeline {
 	set +e
 	git clone https://github.com/abhiaggowda/cbuild.git
 	if ($? -ne 0 );then
-	cd cbuild
 	git pull https://github.com/abhiaggowda/cbuild.git
+	else
+	cd cbuild
 	fi
 	make '''
 	}
