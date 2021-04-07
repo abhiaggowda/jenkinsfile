@@ -6,11 +6,9 @@ pipeline {
 	sh '''
 	#!/bin/bash
 	set +e
-	cd cbuild
-	if ($? -ne 0 );then
 	git clone https://github.com/abhiaggowda/cbuild.git
+	if ($? -ne 0 );then
 	cd cbuild
- 	else
 	git pull https://github.com/abhiaggowda/cbuild.git
 	fi
 	make '''
